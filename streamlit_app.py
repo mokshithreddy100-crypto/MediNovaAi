@@ -65,7 +65,7 @@ def ask_ai(question: str) -> str:
             "on your own computer, then restart the app."
         )
     try:
-        from openai import OpenAI
+        from Openai import openAI
         client = OpenAI(api_key=api_key)
         model = os.getenv("OPENAI_MODEL", "gpt-5.5")
         response = client.responses.create(
