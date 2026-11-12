@@ -75,8 +75,8 @@ def ask_ai(question: str) -> str:
             store=False
         )
         return response.output_text
-    except ImportError:
-        raise RuntimeError("The OpenAI package is missing. Install it with: pip install openai")
+    except ImportError as e:
+        raise RuntimeError(f"The OpenAI import is missing. Install it with: pip install openai")
     except Exception as exc:
         raise RuntimeError(f"AI request failed. Check your connection and API configuration. Details: {exc}")
 
