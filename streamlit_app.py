@@ -6,7 +6,7 @@ from pathlib import Path
 
 import streamlit as st
 st.write("Python version:",sys.version)
-st.write("OpenAI module:"importlib.util.find_spec("openai"))
+st.write("OpenAI module:",importlib.util.find_spec("openai"))
 APP_DIR = Path(__file__).parent
 DB_PATH = APP_DIR / "medinova.db"
 
